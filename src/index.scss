@@ -1,0 +1,52 @@
+.pane {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.editor_container {
+  width: 100%;
+  height: 100%;
+
+  .editor_title {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: grey;
+    width: auto;
+    margin: 0.1rem auto;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    color: white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+}
+
+iframe {
+  border: 0;
+}
+
+textarea {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font: 1.3rem bold;
+  &::before {
+    content: 'tab here to show or hide';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    color: red;
+    width: 100%;
+    height: 1rem;
+  }
+  &.hide {
+    height: 0;
+  }
+}
